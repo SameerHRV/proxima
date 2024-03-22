@@ -20,6 +20,7 @@ export interface IImage extends Document {
   createdAt?: Date;
   updatedAt?: Date;
 }
+
 const ImageSchema = new Schema({
   title: { type: String, required: true },
   transformationType: { type: String, required: true },
@@ -37,6 +38,6 @@ const ImageSchema = new Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-const Image = models?.Image || model('Image', ImageSchema);
+const Image = models?.Image || model("Image", ImageSchema);
 
 export default Image;
